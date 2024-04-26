@@ -1,0 +1,88 @@
+GET filename
+OPEN filename as read only
+READ filename
+filename <- [each word in the file as an array]
+CLOSE filename
+GET wordInFile
+length <- number of lines in filename
+letter <- 0
+recorderP <- 0
+recorderN <- 0
+numeratedletter(word,)
+    target_letter <- lowercase(word[0])
+    numerical_value <- ASCII_CODE(target_letter) - ASCII_CODE('a') + 1
+    return numerical_value
+Search(length)
+    halfline <- length/2
+    test <- first letter of filename[halfline]
+    letter1 <- numeratedletter(test)[=]
+    wordletter1 <- numeratedletter(wordInFile)
+    SWITCH values
+        CASE letter1 > wordletter1
+            return "lower"
+        CASE letter1 < wordletter1
+            return "higher"
+        CASE letter1 = wordletter1
+            return halfline
+IndividualP(startpoint)
+    While test = letter1
+        test <- first letter of filename[startpoint]
+        letter1 <- numeratedletter(test)
+        wordletter1 <- numeratedletter(wordInFile)
+        if letter1 != wordletter1
+            return startpoint
+        else
+            startpoint <- startpoint+1
+            recorderP <- recorderP +1
+IndividualN(startpoint)
+    While test = letter1
+        test <- first letter of filename[startpoint]
+        letter1 <- numeratedletter(test)
+        wordletter1 <- numeratedletter(wordInFile)
+        if letter1 != wordletter1
+            return startpoint
+        else
+            startpoint <- startpoint-1
+            recorderP <- recorderP +1    
+Main()
+    search = search(length,letter)
+    SWITCH run it again?
+        CASE search = "lower"
+            length <-  length * 1/2
+        CASE search = "higher"
+            length <- length + (length /2)
+        CASE search = halfline
+            startpoint <- halfline
+            positive <- IndividualN(startpoint)
+            negative <- IndividualP(startpoint)
+            FOR word <- filename[negative, positive]
+                if word = wordInFile
+                    return your word is at (current directory number) in the file
+            return your word does not exitst in the file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search(length)
+    halfline <- length/2
+    test <- first letter of filename[halfline]
+    letter1 <- numeratedletter(test)[=]
+    wordletter1 <- numeratedletter(wordInFile)
+    SWITCH values
+        CASE letter1 > wordletter1
+            return "lower"
+        CASE letter1 < wordletter1
+            return "higher"
+        CASE letter1 = wordletter1
+            return halfline
+

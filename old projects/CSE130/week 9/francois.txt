@@ -1,0 +1,18 @@
+
+
+
+
+
+GET wanted index of francois sequence
+n <- wanted index of francois sequence      #O(1)  A
+
+if n == 1                                   #O(1)
+    PUT 2                                   #O(1)  B
+else if n == 2                              #O(1)
+    PUT 1                                   #O(1)  C  
+else                                        #O(1)  D
+    a, b = 2, 1                             #O(1)  E
+    for nothing in range(3, n + 1):         #O(n)  F
+        a, b = b, a + b                     #O(1)  G
+    PUT b                                   #O(1)  H
+

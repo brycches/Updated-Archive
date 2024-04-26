@@ -1,0 +1,4 @@
+c:\coding_projects\CSE 210\CSE210-05\obj\Debug\net7.0\CSE210-05.GeneratedMSBuildEditorConfig.editorconfig
+c:\coding_projects\CSE 210\CSE210-05\obj\Debug\net7.0\CSE210-05.AssemblyInfoInputs.cache
+c:\coding_projects\CSE 210\CSE210-05\obj\Debug\net7.0\CSE210-05.AssemblyInfo.cs
+c:\coding_projects\CSE 210\CSE210-05\obj\Debug\net7.0\CSE210-05.csproj.CoreCompileInputs.cache

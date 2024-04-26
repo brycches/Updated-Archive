@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+function findDivisibleNumbers() {
+
+  var start = parseInt(document.getElementById("start").value);
+  var end = parseInt(document.getElementById("end").value);
+  var divisor = parseInt(document.getElementById("divisor").value);
+
+  
+  var outputNumbers = [];
+
+
+  for (var i = start; i <= end; i++) {
+
+    if (i % divisor === 0) {
+
+      outputNumbers.push(i);
+    }
+  }
+
+
+  var outputString = outputNumbers.join(" ");
+
+
+  document.getElementById("output").innerHTML = outputString;
+}
+</script>
+</head>
+
+<body>
+Start: <input type="text" id="start" size="5"><br>
+End: <input type="text" id="end" size="5"><br>
+Divisor: <input type="text" id="divisor" size="5"><br>
+<button type="button" onclick="findDivisibleNumbers()">Check</button>
+<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+this is a sorting program
+
+GET array1
+GET array2
+
+def sublist_stop_finder(i, which_array)
+    sublist_stop = ''
+    sublist_start = i
+    if which_array = 1
+        while sublist_stop == ''
+            if array1[sublist_start] > array1[sublist_start+1]
+                sublist_stop = sublist_start
+            elif array1[i] <= array1[i+1]
+                sublist_start += 1
+        return sublist_stop
+    if which_array = 2
+        while sublist_stop == ''
+            if array2[sublist_start] > array2[sublist_start+1]
+                sublist_stop = sublist_start
+            elif array2[i] <= array2[i+1]
+                sublist_start += 1
+        return sublist_stop
+
+
+
+def array_sorter(sublist1_start, sublist1_end, sublist2_start, sublist2_end, which_array, array_start)
+    
+    if which_array == 1
+        for i_first_subarray in range (sublist1_start, sublist1_end+1)
+            for i_second_subarray in range (sublist2_start, sublist2_end+1)
+                if array1[i_first_subarray] < array1[i_second_subarray]
+                    array2[array_start]= array1[i_first_subarray]
+                    array_start += 1
+                elif array1[i_first_subarray] > array1[i_second_subarray]
+                    array2[array_start]= array1[i_second_subarray]
+                    array_start += 1
+                elif array1[i_first_subarray] == array1[i_second_subarray]
+                    array2[array_start]= array1[i_second_subarray]
+                    array_start += 1
+        return array_start
+    elif which_array == 2
+        for i_first_subarray in range (sublist1_start, sublist1_end+1)
+            for i_second_subarray in range (sublist2_start, sublist2_end+1)
+                if array2[i_first_subarray] < array2[i_second_subarray]
+                    array1[array_start]= array2[i_first_subarray]
+                    array_start += 1
+                elif array2[i_first_subarray] > array2[i_second_subarray]
+                    array1[array_start]= array2[i_second_subarray]
+                    array_start += 1
+                elif array2[i_first_subarray] == array2[i_second_subarray]
+                    array1[array_start]= array2[i_second_subarray]
+                    array_start += 1
+        return array_start
+                    
+def make_sublists(array_start, which_array)
+    done = false
+    sublist1_start = array_start
+    sublist1_end = sublist_stop_finder(array_start, which_array)
+    sublist2_start = sublist1_end + 1
+    sublist2_end = sublist_stop_finder(sublist2_start, which_array)
+    return sublist1_start, sublist1_end, sublist2_start, sublist2_end, done
+
+def which_array()
+    if which_array == 1
+        which_array = 2
+    elif which_array == 2
+        which_array = 1
+    else
+        which_array = 1
+
+def main()
+    done  = False
+    array_start = 0
+    which_array = 1
+    while done == False:
+        which_array = which_array_finder(which_array)
+        sublist1_start, sublist1_end, sublist2_start, sublist2_end, done = make_sublists(array_start, which_array)
+        array_start = array_sorter(sublist1_start, sublist1_end, sublist2_start, sublist2_end, which_array, array_start)
+        print(f"array1 {array1}")
+        print(f"array2 {array2}")
+
+
+
+
+
+
+
+
+

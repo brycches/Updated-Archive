@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+  <title>Mileage Calculator</title>
+  <script>
+    function calculateMileage() {
+      var beginningOdometer = parseFloat(document.getElementById("beginningOdometer").value);
+      var endingOdometer = parseFloat(document.getElementById("endingOdometer").value);
+      var gallonsUsed = parseFloat(document.getElementById("gallonsUsed").value);
+
+      var mileage = (endingOdometer - beginningOdometer) / gallonsUsed;
+
+      document.getElementById("mileageOutput").innerHTML = mileage.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h1>Mileage Calculator</h1>
+
+  <label>Beginning Odometer Reading:</label>
+  <input type="number" id="beginningOdometer" step="0.01">
+
+  <br>
+
+  <label>Ending Odometer Reading:</label>
+  <input type="number" id="endingOdometer" step="0.01">
+
+  <br>
+
+  <label>Gallons of Gasoline Used:</label>
+  <input type="number" id="gallonsUsed" step="0.01">
+
+  <br>
+
+  <button onclick="calculateMileage()">Calculate Mileage</button>
+
+  <br>
+
+  <label>Mileage (miles per gallon):</label>
+  <span id="mileageOutput"></span>
+
+</body>
+</html>

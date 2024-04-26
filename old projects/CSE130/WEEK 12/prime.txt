@@ -1,0 +1,33 @@
+
+
+
+
+
+the algorithmic efficiency is O(n log n) we have two loops, one nested inside the other.
+one of the loops goes through every number in the range, and the other goes through √n
+times through the range. for the purpose of this asignment however we can treat that loop
+as log n, and so becasue we have two loops, on O(n) and the other O(log n) it becomes
+O(n log n)
+
+
+n = int(input("what is your max value?"))     line a
+array = []                                    line b
+for values in range (1, n+1)
+    array.append(values)                      line c
+
+
+
+
+for prime_checks in range from 2 to the square root of the length of the array +1 
+                                              line d
+
+    for numbers in range from 0 to n+1 counting by prime_checks
+                                              line e
+        if   numbers != prime_checks and numbers > 0
+            array[numbers-1] = 0              line f
+
+        
+
+for primes in array
+    if primes != 0                            
+        PUT primes                            line g

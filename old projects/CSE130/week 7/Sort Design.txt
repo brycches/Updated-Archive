@@ -1,0 +1,50 @@
+# 1. Name:
+#      Bryce Chesley
+# 2. Assignment Name:
+#      LAB 07 : SORT DESIGN
+# 3. Assignment Description:
+#      create pseudocode for a number sorter
+# 4. Algorithmic Efficiency
+#      I think that the algaryhtmic efficiency is n log n, as we have nested loops,
+#      and one visits every value of the input, but the other subdivides the input
+#      every iteration through the first loop by 1/n meaning the input gets 1 less
+#      every time we complete the loop.
+# 5. What was the hardest part? Be as specific as possible.
+#      the hardest part was probably calculating the algorythmic efficiency, as the
+#      line between n log n and n^2 was difficult to decide, as the for loop
+#      diminishes in size every iteration, but not dividing by 2 or 3 as given by 
+#      examples in the text book, but rather by a constant of 1, which is technicly
+#      a fraction of n, menaing it gets 1/n smaller every iteration, which means
+#      it does not visit every value every time as the description of n^2 states.
+# 6. How long did it take for you to complete the assignment?
+#      3 hours
+
+
+
+
+
+GET filename
+OPEN filename as read only
+READ filename
+names_list <- [each word in the file as an array]
+CLOSE filename
+
+example <- names_list
+
+i_pivot <- length(example) - 1
+
+while i_pivot >= 0
+    i_largest <- example[i_pivot]
+    i_largest_position <- 0
+    
+    for i, i_check <- enumerate(example[from 0 to i_pivot])
+        if i_check > i_largest
+            i_largest <- i_check
+            i_largest_position <- i
+    if i_largest > example[i_pivot]
+        example[i_largest_position], example[i_pivot] <- example[i_pivot], example[i_largest_position]
+
+    i_pivot <- i_pivot - 1
+
+
+put example

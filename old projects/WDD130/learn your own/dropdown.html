@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button{
+    background-color:lightcoral;
+    color:black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 50px;
+}
+.button:hover{
+    background-color:#3e95c1;
+    color:#385c8f;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<h2>How do you make a lot of content more apealing to the user?</h2>
+<p>why not use the acordian method.</p>
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>There is a lot of information that can be hidden for a better looking ui, but can be clicked if the want to learn more</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>The Acordian style of hiding information is a great one of those tools</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>It is not somthing that i am going to use on my personal site, but it is still super cool to learn how to do.</p>
+  <a class='button' href="#">You can even put a button to link someone somewhere else in one.</a>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
