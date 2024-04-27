@@ -32,7 +32,7 @@ _Note: Add more rows as needed._
 
 This section should be filled out at the end of the Sprint and submitted.  For the Hello World program, you will complete this at the end of Week 1.
 
-1. Put your GitHub link for your demonstration software here: 
+1. Put your GitHub link for your demonstration software here: https://github.com/brycches/Updated-Archive/tree/6ce3d8fe6be24566bf83003573088aa1bd40a3a9/CSE%20310%20Applied%20Programming
 
 2. Put your YouTube link for your code walkthrough and demo video here: https://youtu.be/B61U8g7i3_g
 
@@ -40,11 +40,11 @@ This section should be filled out at the end of the Sprint and submitted.  For t
 
 |Question                                                    |Response|
 |------------------------------------------------------------|--------|
-|Are the links above public and working?                     |        |
-|Did you complete all the unique requirements for the module?|        |
+|Are the links above public and working?                     |    Y   |
+|Did you complete all the unique requirements for the module?|    Y   |
 |Did you write at least 100 lines of code?                   | N/A    |
-|Did you fully complete the readme.md file?                  |        |
-|Did you put the readme.md file in GitHub in the top folder? |        |
+|Did you fully complete the readme.md file?                  |    Y   | 
+|Did you put the readme.md file in GitHub in the top folder? |    Y   |
 
 4. In each Sprint, you will have the opportunity to complete an optional Stretch Challenge for bonus points.  You will normally report what you did here.  There is no Stretch Challenge for Hello World.
 
@@ -52,8 +52,8 @@ This section should be filled out at the end of the Sprint and submitted.  For t
 
 |Activity         |Total Hours:Minutes|
 |-----------------|-------------------|
-|Individual Module|                   |
+|Individual Module|       30          |
 
 
 6. What strategies (behavioral and technical) worked well during this Sprint?  What did not work well?  List some possible ways that you can improve next Sprint.
-
+well one of my strategies is to sit down and do all my homework at once, getting up as infrequently as possible until it is all done. This works pretty well for lighter loads, but perhaps i should start working throughout the week such that I dont spend an entire day only doing homework.
